@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+ <header>
+   <div class="h-[790px] w-full bg-[url('/assest/image.png')] bg-center bg-cover px-28 py-5 relative">
+    <nav class="flex items-center">
+      <img src="assest/logo.png" alt="" class="w-40 cursor-pointer">
+
+      <ul class="hidden lg:flex text-center ml-80">
+        <li class="inline-block px-5"><a class=" text-white" href="">Home</a></li>
+        <li class="inline-block px-5"><a class=" text-white" href="">About</a></li>
+        <li class="inline-block px-5"><a class=" text-white" href="">Feature</a></li>
+        <li class="inline-block px-5"><a class=" text-white" href="">Contact</a></li>
+      </ul>
+
+
+      <!-- mobile screen hambeergrare -->
+
+     <div id="hamburger" class="lg:hidden cursor-pointer z-50 text-white ml-48">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div id="menu" class=" hidden bg-blue-400 absolute inset-0 z-10 ">
+      <ul class="h-full grid place-items-center py-20">
+        <li><a id="hLink" href="" class="">Home</a></li>
+        <li><a id="hLink" href="" class="hover">Features</a></li>
+        <li><a id="hLink" href="" class="hover">Testimonial</a></li>
+        <li><a id="hLink" href="" class="hover">Pricing</a></li>
+        <li><a id="hLink" href="" class="hover">Blog</a></li>
+        <li><a id="hLink" href="" class="hover">Contact</a></li>
+
+      
+      </ul>
+    </div>
+    </nav>
+
+    <div class="text-white mt-48 max-w-lg">
+      <h1 class="text-5xl font-semibold leading-normal">Lorem, ipsum <br>dolor.</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia magnam accusantium molestiae repudiandae veniam quo dicta architecto tenetur error.</p>
+    </div>
+ <img class="w-full xl:w-1/2 xl:absolute bottom-0 right-20" src="assest/grocery-image.png" alt="">
+   </div>
+ </header>
+ <script>
+  const hamburger = document.querySelector('#hamburger');
+  const menu = document.querySelector('#menu');
+  const hLink = document.querySelector('#hLink');
+  const faSolid = document.querySelector(".fa-solid");
+
+
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle('hidden');
+    faSolid.classList.toggle('fa-xmark');
+  })
+
+  hLink.forEach(link => {
+    link.addEventListener('click',() => {
+      menu.classList.toggle('hidden');
+      faSolid.classList.toggle('fa-xmark');
+    })
+  })
+</script>
+
+</body>
+</html>
